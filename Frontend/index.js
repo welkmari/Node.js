@@ -8,7 +8,8 @@ fetch("http://localhost:3000/usuarios").then( res=>{
 }).then(usuarios =>{
     const listaUsuarios = document.getElementById("lista-usuarios");
     usuarios.forEach(usuario => {
-        console.log(usuario);
+        console.log(usuario.nome);
+        listaUsuarios.innerHTML+= `<li class="list-group-item">${usuario.nome}</li>`
     });
 
 })
