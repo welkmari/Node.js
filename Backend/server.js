@@ -1,5 +1,6 @@
 const e = require('express');
 const express = require('express'); //importa o Express
+const cors = require('cors'); //importa o CORS
 
 const app = express(); //Criar o servidor
 
@@ -7,6 +8,7 @@ const port = 3000; //Variavel para armazenar a porta
 
 //Para Permitir receber json nas requisições
 app.use(express.json());
+app.use(cors());
 
 const usuarios = [
     {"id" : 1 ,"nome": "Kawã Felipão", "idade": 18, "senha":"1234"},
