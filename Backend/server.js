@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 const usuarios = [
-    {"id" : 1 ,"nome": "Kawã Felipão", "idade": 18, "senha":"1234"},
+    {"id" : 1 ,"nome": "Mari Welk", "idade": 18, "senha":"1234"},
     {"id" : 2, "nome":"Admin", "idade" : 18, "senha" : "123"}
 ]
 
