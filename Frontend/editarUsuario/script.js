@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function atualizarUsuario(event) {
-    event.preventDefault()
+    event.preventDefault();
     fetch(`http://localhost:3000/usuarios/${usuarioId}`, {
 
         method: 'PUT',
@@ -34,7 +34,8 @@ function atualizarUsuario(event) {
 
         body: JSON.stringify({
             nome: nome.value,
-            idade: idade.value
+            idade: idade.value,
+            senha: senha.value
 
         })
 
@@ -43,8 +44,8 @@ function atualizarUsuario(event) {
         .then(response => response.json())
 
         .then(data => {
-            console.log(data)
-            alert(Usuário ${usuarioId} foi atualizado)
+            console.log(data);
+            alert(`Usuário ${usuarioId} foi atualizado`)
             window.location.href = "../index.html";
         })
 
