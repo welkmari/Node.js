@@ -49,7 +49,7 @@ app.post("/usuarios",(req, res) =>{
     const novoUsuario = req.body;
     novoUsuario.Id = usuarios.length +1;
     usuarios.push(novoUsuario); //Adiciona um novo id na lista de usuários
-    res.send(201).send(novoUsuario) //Retorna o novo usuário
+    res.send(201 ).send(novoUsuario) //Retorna o novo usuário
 })
 
 //Atualizar usuario
