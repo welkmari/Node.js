@@ -15,6 +15,8 @@ const usuarios = [
     {"id" : 2, "nome":"Admin", "idade" : 18, "senha" : "123"}
 ]
 
+let nextId = 3;
+
 //req - request(requisição)
 //res - response(resposta)
 app.get("/", (req,res)=>{
@@ -54,6 +56,7 @@ app.post("/usuarios",(req, res) =>{
 app.put("/usuarios/:id", (req,res)=>{
     const id= parseInt(req.params.id);
     const novoUsuario = req.body; 
+    novoUsuario.id = nextId++;
     const index = usuarios.findIndex(usuario => usuario.id == id); //Procura pela lista toda se tem um id igual         
     
     if(index != null){
