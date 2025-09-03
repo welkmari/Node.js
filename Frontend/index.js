@@ -29,7 +29,20 @@ fetch("http://localhost:3000/usuarios").then(res => {
         console.error(err);
     });
 
-    function deletarUsuario(userId){
-        console.log(userId);
+    function deletarUsuario(userId) {
+        let confirmar = confirm("Você deseja excluir esse usuário" + userId + "?");
+        console.log(confirmar);
+        if (confirmar) {
+            fetch(`http://localhost:3000/usuarios/${userId}`, {
+    
+                method: 'DELETE',
+    
+            })
+    
+                .then(response => {
+                    console.log(response);
+                })
+    
+                .catch(error => console.log(error));
+        }
     }
-
