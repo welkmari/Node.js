@@ -14,10 +14,12 @@ fetch("http://localhost:3000/usuarios").then(res => {
 
         <div class="d-flex justify-content-between">
             <h5>nome: ${usuario.nome} -idade ${usuario.idade}</h5>
-            <a href ="editarUsuario/index.html?id="${usuario.id}" class="btn btn-primary">Atualizar</a>
+            <a href ="editarUsuario/index.html?id=${usuario.id}" class="btn btn-primary">Atualizar</a>
+            <button type="button" class="btn btn-danger">Deletar</button>
         </div>    
 
-        </li>`
+        </li>
+        `;
     });
 
 })

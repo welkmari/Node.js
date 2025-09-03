@@ -61,7 +61,7 @@ app.put("/usuarios/:id", (req,res)=>{
     
     if(index != null){
         usuarios[index] = novoUsuario;
-        res.status(204).send(novoUsuario);
+        res.status(200).send(novoUsuario);
     }else{
         res.status(404).send("Usuário não encontrado!")
     }
